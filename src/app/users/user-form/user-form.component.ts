@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { IUser } from '../modelo/iuser';
 
 @Component({
   selector: 'app-user-form',
@@ -7,4 +8,24 @@ import { Component } from '@angular/core';
 })
 export class UserFormComponent {
 
+  @Output() usuarioCreado = new EventEmitter<IUser>()
+
+  newUser : IUser = {
+    id : 0,
+    name : "",
+    username: '',
+    phone: '',
+    website: ''
+
+  }
+  onSubmit() {
+    this.usuarioCreado.emit(this.newUser);
+    this.newUser = {
+      id: 0,
+      name: '',
+      username: '',
+      phone: '',
+      website: ''
+    };
+}
 }
