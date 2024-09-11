@@ -1,0 +1,18 @@
+<div id="table_users">
+    <table border="1px solid black">
+        <tr id="table_headers">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Phone</th>
+            <th>Website</th>
+        </tr>
+        <tr *ngFor="let usuario of users_list">
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.name}}</td>
+            <td>{{usuario.username}}</td>
+            <td>{{usuario.phone}}</td>
+            <td>{{usuario.website}}</td>
+        </tr>
+    </table>
+</div>
