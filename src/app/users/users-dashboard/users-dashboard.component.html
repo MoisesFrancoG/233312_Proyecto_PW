@@ -1,23 +1,24 @@
-<div id="view">
-    <div id="table_users">
-        <h3>Tabla de usuarios</h3>
-        <table>
-            <tr id="table_headers">
-                <th>ID</th>
-                <th>Name</th>
-                <th>Username</th>
-                <th>Phone</th>
-                <th>Website</th>
-            </tr>
-            <tr *ngFor="let usuario of users_list">
-                <td>{{usuario.id}}</td>
-                <td>{{usuario.name}}</td>
-                <td>{{usuario.username}}</td>
-                <td>{{usuario.phone}}</td>
-                <td>{{usuario.website}}</td>
-            </tr>
-        </table>
+    <div id="full">
+        <div id="view">
+            <div id="table_users">
+                <h3>Tabla de usuarios</h3>
+                <table>
+                    <tr id="table_headers">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Phone</th>
+                        <th>Website</th>
+                    </tr>
+                    <tr *ngFor="let usuario of users_list">
+                        <td>{{usuario.id}}</td>
+                        <td>{{usuario.name}}</td>
+                        <td>{{usuario.username}}</td>
+                        <td>{{usuario.phone}}</td>
+                        <td>{{usuario.website}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <app-user-form (usuarioCreado)="addUser($event)"></app-user-form>
     </div>
-    
-    <app-user-form (usuarioCreado)="addUser($event)"></app-user-form>
-</div>
