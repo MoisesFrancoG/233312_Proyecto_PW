@@ -1,0 +1,15 @@
+#full {
+    width: 100%;
+    display: flex;
+}
+#view {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+table {
+    border: 1px solid black;
+    margin: 1% auto;
+    background-color: azure;
+}

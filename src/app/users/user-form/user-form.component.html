@@ -1,0 +1,26 @@
+<div id="form-father">
+    <h3>Agregar usuario</h3>
+    <div id="form">
+        <div class="form-submit">
+            <label for="name">Nombre</label>
+            <input type="text" [(ngModel)]="newUser.name" id="name">
+        </div>
+        <div class="form-submit">
+            <label for="username">Nombre de usuario</label>
+            <input type="text" [(ngModel)]="newUser.username" id="username">
+        </div>
+        <div class="form-submit">
+            <label for="user_phone">Teléfono</label>
+            <input type="text" [(ngModel)]="newUser.phone" id="user_phone">
+        </div>
+    
+        <div class="form-submit">
+            <label for="user_web">Sitio Web</label>
+            <input type="text" [(ngModel)]="newUser.website" id="user_web">
+        </div>
+        
+        <div id="btn-submit">
+            <button (click)="onSubmit()">Enviar</button>
+        </div>
+    </div>
+</div>
